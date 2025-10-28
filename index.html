@@ -10,7 +10,6 @@
 body { font-family: Arial, sans-serif; background-color: #f5f0eb; scroll-behavior: smooth; color: #4b3b2a; }
 header { background-color: #a78b6e; color: white; padding: 20px 0; }
 footer { background-color: #7b5e45; color: white; padding: 10px 0; text-align: center; }
-.carousel-inner img { width: 100%; height: 400px; object-fit: cover; border-radius: 10px; }
 .card-body { background-color: #ffffff; }
 .sponsor-logos button { margin: 5px; background-color: #d9bfa4; color: #4b3b2a; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
 .content-section { display: flex; margin-top: 20px; }
@@ -19,6 +18,8 @@ footer { background-color: #7b5e45; color: white; padding: 10px 0; text-align: c
 .content-section .col:last-child { width: 70%; }
 .btn-outline-primary { color: #4b3b2a; border-color: #4b3b2a; }
 .btn-outline-primary:hover { background-color: #d9bfa4; border-color: #4b3b2a; }
+.dropdown-toggle { background-color: #d9bfa4; color: #4b3b2a; border-radius: 5px; border: none; }
+.dropdown-menu { background-color: #f5f0eb; }
 </style>
 </head>
 <body>
@@ -50,28 +51,6 @@ footer { background-color: #7b5e45; color: white; padding: 10px 0; text-align: c
 </div>
 </nav>
 
-<div id="photoCarousel" class="carousel slide my-4" data-bs-ride="carousel">
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="https://raw.githubusercontent.com/anast/мальп/main/photos/doc1.jpg" class="d-block w-100" alt="Мальтійська болонка 1">
-  </div>
-  <div class="carousel-item">
-    <img src="https://raw.githubusercontent.com/anast/мальп/main/photos/doc2.jpg" class="d-block w-100" alt="Мальтійська болонка 2">
-  </div>
-  <div class="carousel-item">
-    <img src="https://raw.githubusercontent.com/anast/мальп/main/photos/doc3.jpg" class="d-block w-100" alt="Мальтійська болонка 3">
-  </div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Попередній</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Наступний</span>
-</button>
-</div>
-
 <section class="container my-5">
 <h2>Про породу</h2>
 <p>Мальтійська болонка — це маленька, елегантна собака з довгою білою шерстю...</p>
@@ -81,6 +60,18 @@ footer { background-color: #7b5e45; color: white; padding: 10px 0; text-align: c
   <li><strong>Тривалість життя:</strong> 12–15 років</li>
   <li><strong>Особливості:</strong> гіпоалергенна порода, не линяє</li>
 </ul>
+
+<!-- Динамічний елемент Bootstrap: Dropdown -->
+<div class="dropdown my-3">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+    Швидка інформація
+  </button>
+  <ul class="dropdown-menu">
+    <li><span class="dropdown-item">Гіпоалергенна порода</span></li>
+    <li><span class="dropdown-item">Потребує регулярного догляду за шерстю</span></li>
+    <li><span class="dropdown-item">Добре підходить для квартир</span></li>
+  </ul>
+</div>
 </section>
 
 <section class="container my-5">
